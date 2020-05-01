@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'admin-page',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPageComponent implements OnInit {
 
-  constructor() { }
+  isSidebarCollapse = false;
+  isOnMobileView = true;
+  isSidebarOpen = false;
 
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+
+
+  }
+
+  toggleCollapseSitebar(event) {
+    event.preventDefault();
+    if (this.isOnMobileView) {
+      this.isSidebarOpen = true;
+    }
+  }
+
+  collapseSitebarMobile() {
+    this.isSidebarOpen = false;
+  }
 }

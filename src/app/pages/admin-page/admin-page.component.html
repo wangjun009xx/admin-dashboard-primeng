@@ -1,4 +1,18 @@
-<nav> this is nav</nav>
-<aside>this is aside</aside>
-<main> this is main</main>
-<footer>this is footer</footer>
+<div class="layout-wrapper"
+     [ngClass]="{'sidebar-collapse': isSidebarCollapse || (isOnMobileView && !isSidebarOpen), 'sidebar-open':isSidebarOpen,'on-mobile-view':isOnMobileView}">
+  <aside>
+  </aside>
+  <div class="sidebar-overlay" *ngIf="isSidebarOpen && isOnMobileView" (click)="collapseSitebarMobile()"></div>
+  <div class="content-wrapper">
+    <nav>
+      <a href="#!" class="sitebar-toggler" (click)="toggleCollapseSitebar($event)">
+        <i class="pi pi-bars"></i>
+      </a>
+    </nav>
+    <main> this is main</main>
+    <footer>this is footer</footer>
+
+  </div>
+
+
+</div>
