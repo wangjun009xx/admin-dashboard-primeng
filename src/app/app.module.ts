@@ -18,7 +18,9 @@ import {AdminPageComponent} from './pages/admin-page/admin-page.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'windowObject', useValue: window},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
