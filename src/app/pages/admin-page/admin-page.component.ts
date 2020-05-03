@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {WindowResizeService} from '../../shared/services/window-resize.service';
 import {SCREEN_SIZE} from '../../core/constants';
 import {Subscription} from 'rxjs';
+import {AdminPageService} from './admin-page.service';
 
 @Component({
   selector: 'admin-page',
@@ -10,35 +11,19 @@ import {Subscription} from 'rxjs';
 })
 export class AdminPageComponent implements OnInit, OnDestroy {
 
-  isSidebarCollapse = false;
-  isOnMobileView = true;
-  isSidebarOpen = false;
+
   windowResizeServiceSub: Subscription;
 
-  constructor(private windowResizeService: WindowResizeService) {
+  constructor(private windowResizeService: WindowResizeService,
+              public apService: AdminPageService) {
   }
 
   ngOnInit() {
     this.windowResizeServiceSub = this.windowResizeService.onRezie().subscribe(size => {
-      this.isOnMobileView = [SCREEN_SIZE.XS, SCREEN_SIZE.SM, SCREEN_SIZE.MD].includes(size);
-      if (!this.isOnMobileView) {
-        this.isSidebarOpen = false;
-      }
+      this.apService.checkViewOnResize(size);
     });
   }
 
-  toggleCollapseSitebar(event) {
-    event.preventDefault();
-    if (this.isOnMobileView) {
-      this.isSidebarOpen = true;
-    } else {
-      this.isSidebarCollapse = !this.isSidebarCollapse;
-    }
-  }
-
-  collapseSitebarMobile() {
-    this.isSidebarOpen = false;
-  }
 
   ngOnDestroy(): void {
     this.windowResizeServiceSub.unsubscribe();

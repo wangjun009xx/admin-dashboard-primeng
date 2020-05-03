@@ -1,0 +1,27 @@
+.item {
+  padding: 15px;
+  position: relative;
+}
+
+.badge{
+  font-size: .7rem;
+  padding: 2px 4px;
+  border-radius: 3px;
+  position: absolute;
+  right: 5px;
+  top: 9px;
+
+  &.badge-notify{
+    background-color: #17a2b8;
+    color: #ffffff;
+  }
+}
+
+.sitebar-toggler {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+}
+
+.user-infor__icon {
+  margin: 10px;
+}
