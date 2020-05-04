@@ -1,0 +1,16 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e9ecef;
+}
+
+.login-form {
+  width: 350px;
+}
+
+input {
+  width: 100%;
+}

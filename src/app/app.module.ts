@@ -7,10 +7,10 @@ import {LoginPageComponent} from './pages/login-page/login-page.component';
 import {Error404PageComponent} from './pages/error404-page/error404-page.component';
 import {AdminPageModule} from './pages/admin-page/admin-page.module';
 import {SharedModule} from './shared/shared.module';
+import {LoginPageModule} from './pages/login-page/login-page.module';
 
 @NgModule({
   declarations: [
-    LoginPageComponent,
     Error404PageComponent,
     AppComponent,
   ],
@@ -20,7 +20,8 @@ import {SharedModule} from './shared/shared.module';
     SharedModule,
 
     // Page
-    AdminPageModule
+    AdminPageModule,
+    LoginPageModule,
   ],
   providers: [
     {provide: 'windowObject', useValue: window},

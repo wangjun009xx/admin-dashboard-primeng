@@ -8,6 +8,9 @@ import {AdminPageService} from '../admin-page.service';
 })
 export class HeaderComponent implements OnInit {
 
+
+  isOpenUserInfor = false;
+
   constructor(public apService: AdminPageService) {
   }
 

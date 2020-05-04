@@ -11,9 +11,14 @@
 
   </div>
   <div class="item user-infor">
-    <a href="#!">
-      <i class="user-infor__icon far fa-user-circle"></i>
+    <a href="#!" class="user-infor__trigger" (click)="isOpenUserInfor = !isOpenUserInfor">
+      <i class="far fa-user-circle"></i>
       <span>Alexander Pierce</span>
     </a>
+    <div class="user-infor__container" [ngStyle]="{'display': isOpenUserInfor? 'block':'none' }">
+      <ul>
+        <li><a href="#!">LOGOUT</a></li>
+      </ul>
+    </div>
   </div>
 </nav>

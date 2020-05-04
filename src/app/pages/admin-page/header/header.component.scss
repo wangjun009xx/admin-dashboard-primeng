@@ -1,27 +1,67 @@
 .item {
-  padding: 15px;
+  padding: 10px 15px;
   position: relative;
 }
 
-.badge{
+.badge {
   font-size: .7rem;
   padding: 2px 4px;
   border-radius: 3px;
   position: absolute;
   right: 5px;
-  top: 9px;
+  top: 5px;
 
-  &.badge-notify{
+  &.badge-notify {
     background-color: #17a2b8;
     color: #ffffff;
   }
 }
 
+a {
+  color: rgba(0, 0, 0, 0.5);
+
+  &:hover, &:active {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+}
+
 .sitebar-toggler {
-  color: rgba(0, 0, 0, 0.7);
+
   font-size: 20px;
 }
 
-.user-infor__icon {
-  margin: 10px;
+.user-infor {
+  position: relative;
+
+  .user-infor__trigger {
+    i {
+      margin: 10px;
+    }
+  }
+
+  .user-infor__container {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    min-width: 250px;
+    max-width: 400px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    padding: 15px;
+    background-color: white;
+    z-index: 20;
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        font-size: 13px;
+      }
+    }
+  }
 }
