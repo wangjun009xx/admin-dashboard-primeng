@@ -1,4 +1,4 @@
-import {SCREEN_SIZE} from '../../core/constants';
+import {SCREEN_SIZE} from '../../core/constant/constants';
 
 export class AdminPageService {
   isSidebarCollapse = false;

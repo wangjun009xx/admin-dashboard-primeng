@@ -2,7 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {BehaviorSubject, fromEvent} from 'rxjs';
 import {auditTime, distinctUntilChanged, map} from 'rxjs/operators';
 import {CommonService} from './common.service';
-import {SCREEN_SIZE} from '../../core/constants';
+import {SCREEN_SIZE} from '../../core/constant/constants';
 
 @Injectable({
   providedIn: 'root'

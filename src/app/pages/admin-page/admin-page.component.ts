@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {WindowResizeService} from '../../shared/services/window-resize.service';
-import {SCREEN_SIZE} from '../../core/constants';
 import {Subscription} from 'rxjs';
 import {AdminPageService} from './admin-page.service';
 

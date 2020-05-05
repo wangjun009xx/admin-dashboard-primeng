@@ -3,8 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {AdminPageComponent} from './pages/admin-page/admin-page.component';
 import {LoginPageComponent} from './pages/login-page/login-page.component';
 import {Error404PageComponent} from './pages/error404-page/error404-page.component';
-import {AuthGuard} from './core/auth.guard';
-import {GuestGuard} from './core/guest.guard';
+import {AuthGuard} from './core/guard/auth.guard';
+import {GuestGuard} from './core/guard/guest.guard';
 
 
 const routes: Routes = [

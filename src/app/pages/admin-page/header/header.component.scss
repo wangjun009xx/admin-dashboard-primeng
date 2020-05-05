@@ -45,7 +45,7 @@ a {
     display: none;
     top: 100%;
     right: 0;
-    min-width: 250px;
+    min-width: 230px;
     max-width: 400px;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 4px;
@@ -56,11 +56,20 @@ a {
 
     ul {
       padding: 0;
+      margin: 0;
       list-style: none;
 
-      a {
-        text-decoration: none;
-        font-size: 13px;
+      li {
+        padding: 10px;
+
+        a {
+          text-decoration: none;
+          font-size: 13px;
+
+          i {
+            margin-right: 5px;
+          }
+        }
       }
     }
   }

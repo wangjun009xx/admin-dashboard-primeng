@@ -17,7 +17,21 @@
     </a>
     <div class="user-infor__container" [ngStyle]="{'display': isOpenUserInfor? 'block':'none' }">
       <ul>
-        <li><a href="#!">LOGOUT</a></li>
+        <li>
+          <a href="#!">
+            <i class="far fa-user-circle"></i> PROFILE
+          </a>
+        </li>
+        <li>
+          <a href="#!">
+            <i class="fas fa-cog"></i> SETTINGS
+          </a>
+        </li>
+        <li>
+          <a href="#!" (click)="logout($event)">
+            <i class="fas fa-power-off"></i> LOGOUT
+          </a>
+        </li>
       </ul>
     </div>
   </div>
