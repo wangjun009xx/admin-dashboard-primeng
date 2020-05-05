@@ -1,16 +1,31 @@
 <div class="login-page">
-  <p-card [style]="{backgroundColor:'white'}">
+  <div class="error-message">
+    <p-messages styleClass="no-icon"></p-messages>
+  </div>
+  <p-card>
     <div class="login-form">
-      <div class="row-form">
-        <input-icon iconClass="fas fa-user">
-          <input placeholder="Username" type="text" pInputText>
-        </input-icon>
-      </div>
-      <div class="row-form">
-        <input-icon iconClass="fas fa-lock">
-          <input placeholder="password" type="password" pInputText>
-        </input-icon>
-      </div>
+      <form [formGroup]="form"
+            #ngForm="ngForm"
+            (ngSubmit)="login()">
+        <div class="row-form">
+          <input-icon iconClass="fas fa-user">
+            <input placeholder="Username" type="text" pInputText formControlName="username">
+          </input-icon>
+        </div>
+        <div class="row-form">
+          <input-icon iconClass="fas fa-lock">
+            <input placeholder="password" type="password" pInputText formControlName="password">
+          </input-icon>
+        </div>
+        <div class="row-form">
+          <button
+            [disabled]="form.invalid"
+            pButton
+            type="submit"
+            label="Login"
+            style="width: 100%"></button>
+        </div>
+      </form>
     </div>
   </p-card>
 

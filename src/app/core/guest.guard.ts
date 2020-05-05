@@ -6,17 +6,17 @@ import {CommonService} from '../shared/services/common.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class GuestGuard implements CanActivate {
 
 
   constructor(private router: Router) {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (!CommonService.isEmpty(localStorage.getItem('token'))) {
+    if (CommonService.isEmpty(localStorage.getItem('token'))) {
       return true;
     } else {
-      this.router.navigate(['login']);
+      this.router.navigate(['']);
       return false;
     }
   }

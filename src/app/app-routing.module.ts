@@ -4,6 +4,7 @@ import {AdminPageComponent} from './pages/admin-page/admin-page.component';
 import {LoginPageComponent} from './pages/login-page/login-page.component';
 import {Error404PageComponent} from './pages/error404-page/error404-page.component';
 import {AuthGuard} from './core/auth.guard';
+import {GuestGuard} from './core/guest.guard';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
+    canActivate: [GuestGuard],
     component: LoginPageComponent,
   },
   {

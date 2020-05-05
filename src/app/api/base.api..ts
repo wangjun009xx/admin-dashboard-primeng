@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 
 @Injectable({providedIn: 'root'})
-export class BaseApiService {
+export class BaseApi {
 
   baseUrl: string;
   baseHeader = {
