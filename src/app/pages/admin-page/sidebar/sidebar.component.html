@@ -1,1 +1,25 @@
-<p>sidebar works!</p>
+<a routerLink="/" class="brand-link">
+  LOGO
+</a>
+<ul class="layout-menu">
+  <li class="menu-item">
+    <a href="#/" class="menu-item__link">
+      <i class="menu-item__icon fas fa-tachometer-alt"></i>
+      <span>Dashboard</span>
+    </a>
+  </li>
+  <li class="menu-item has-child">
+    <a href="#/" class="menu-item__link">
+      <i class="menu-item__icon fas fa-tachometer-alt"></i>
+      <span>Page</span>
+    </a>
+    <ul class="menu-child">
+      <li class="menu-item">
+        <a href="#/" class="menu-item__link">
+          <i class="menu-item__icon fas fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
